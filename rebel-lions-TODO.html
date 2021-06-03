@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rebel Lions Development To-Dos</title>
+</head>
+<body>
+	<h1>Notes & To-Do List</h1>
+
+		<h2>Current</h2>
+
+		<ul>
+			<li>COMMENT YOUR CODE</li>
+			<li>Style the dropdown with Bootstrap styling (or use their select with a submit button)</li>
+			<li>Character card dynamics</li>
+			<li>Understand modals</li>
+			<li>Implement Bootstrap grid</li>
+			<li>Make a JSON from villages spreadsheet</li>
+			<li>Dynamically add On Mission and Overseeing and Moving and Idle and Injured and Captured and Killed headings and arrays to the village and character cards and lists</li>
+			<li>Remediate accessibility</li>
+			<li>Add a file input that loads a saved game</li>
+			<li>Add a download button that saves your game locally</li>
+			<li>Delete the To Do link from the main page</li>
+			<li>Add How-to-Play page and link</li>
+
+		</ul>
+
+
+		<h2>Completed</h2>
+
+			<ul>
+
+				<li><del>Fill out character spreadsheet and make a JSON out of it</del></li>
+				<li><del>Debug modal</del></li>
+				<li><del>Character encyclopedia modal</del></li>
+				<li><del>Replace Star Wars glyphicons</del></li>
+
+			</ul>
+
+		<h2>Game log</h2>
+
+			<p>Instead of messaging system</p>
+
+		<h2>Starting Map</h2>
+
+			<ul>
+				<li>Randomize loyalty. 5 loyal systems to Rebels. 3 to Imperials, with 2 subjugated planets. Imperials start with Coruscant, Rebels start with Yavin IV.</li>
+				<li>Randomize buildings and resources. Each side starts with at least 1 construction yard, 1 training facility, and 1 orbital shipyard.</li>
+				<li>Max three of any building type on a planet at start.</li>
+				<li>Mask Outer Rim planets</li>
+				<li>Start with same group of characters +2 random, or +4 random</li>
+				<li>Add intermittent Star Wars and other fun quotes for flavor.</li>
+			</ul>
+
+		<h2>Villages</h2>
+
+			<ul>
+				<li>If Rebel loyalty > 65, then planet supports Rebels. If Ministry loyalty > 65, then planet supports Ministry. If niether, planet is neutral.</li>
+				<li>If you have troops on the planet and you lose loyalty, calculate uprising and garrison.</li>
+				<li>If you do not have troops on the planet and you lose loyalty, planet joins enemy.</li>
+				<li>If you lose troops on disloyal planet, calculate uprising and smuggler losses (and enemy information gained).</li>
+				<li>Calculate ship blockade/battle/bombardment (listed below)</li>
+				<li>Production/Resources/Building availability</li>
+				<li>Masked or unmasked to each side</li>
+			</ul>
+
+			<ul>
+				<li>Successful Diplomacy missions (single village, positive, 100%)
+				<li>Successful Incite Uprising missions (single village, positive, 100%)
+				<li>Successful Subdue Uprising missions (single village, positive, 100%)
+				<li>Invading a village (single village, negative)
+				<li>Bombarding and destroying non-military structures on a village (whole region, negative, 100%)
+				<li>Destroying enemy ground troops through village bombardment without hitting non-military structures (whole region, positive)
+				<li>Destroying enemy capital ship (whole region, positive)
+				<li>Fire Ballista destroying a village (the whole map, negative, 100% [may not affect Outer Rim planets])
+			</ul>
+
+			<p>And finally, when a system changes sides without being invaded it affects the whole sector. If the planet switches from one side to another or from neutral to one side the effect is positive for whomever it joined. If the planet switches from one side to neutral, the effect is negative for whoever it left.</p>
+
+			<p>Uprisings: If the loyalty of one of your planets is not strongly in your favor you will need a garrison on it to keep it in line.  The garrison requirement can range from 1 - 6 depending on how loyal the planet is to you. If you let the garrison requirement exceed the number of garrison troops on the planet, then the planet will go into an uprising. This is just bad news all around for you. First all production on the planet ceases. Secondly any personnel or troops you have on the planet are at risk. Personnel can be injured by simulated riots on the planet, and even troops on the surface will spontaneously be destroyed if you let the uprising fester long enough. This is extremely dangerous because the game will NOT inform you that the troop regiment was destroyed; they'll just simply disappear. While a planet going into an uprising does not affect other planet's loyalties, if you wait long enough and let all of your ground troops be destroyed your planet will switch alignment, which an be devastating to your sector-wide support. The best way to quell an uprising on one of your planets is a swift response. Gather as many Special Forces and characters as possible and send a single massive Subdue Uprising mission to the planet, and get as many garrison troops as you can spare onto the planet. The defenses menu for the planet may indicate that the planet has a garrison requirement from somewhere from 7-12, or some requirement above the normal high of 6. Even if you meet this, it will NOT end the uprising right then and there, but it's a start. Eventually with enough garrison troops and a subdue uprising mission the planet will change it's tune and come around to your side. But it's important that you respond swiftly to an uprising, as a minor annoyance can turn into a sector- wide crisis.</p>
+
+			<p>Colonization: A great way to expand your resource base and create new production facilities is to move out into the Outer Rim Territories (the sectors on the outside of the galaxy whose planets look initially like stars on the galaxy map. You won't find out anything about these planets until you send a ship to check them out). Unfortunately this takes an agonizing long time before it bears any real fruit, so it's a good idea to start early. The systems in the Outer Rim will either be inhabited or uninhabited. Uninhabited systems have no loyalty bar, because technically there's no one there to have loyalty for either side. To bring an uninhabited planet under your control simply orbit a troop carrying ship around it and click and drag the regiment onto the planet. You cannot invade the planet, just move the regiment to take it. However technically the planet still doesn't have a population. If you remove the troop regiment the planet will go back to being uninhabited, and sector wide support for you will fall, because technically you "lost" a planet. To fully colonize the planet you have to place a building on the system. It doesn't matter what building it is, once the planet has at least one it gains a population and a loyalty bar. You can now remove all the troop regiments from the planet and it will remain under your control. It will start completely loyal to you, but remember that it can still be influenced by the enemy so don't assume it will remain loyal to you for all time. The inhabited systems on the Outer Rim tend to have very fewer energy and mineral resources while the uninhabited ones usually have many of each. Thus, it's a lot easier and cheaper to colonize an uninhabited planet than to take the time to send a diplomat all the way out there or to conquer the planet and keep a garrison there.</p>
+
+
+			<h3>Central</h3>
+
+				<ul>
+					<li>Red Rock</li>
+					<li>Caves</li>
+					<li>Foxtail</li>
+					<li>Moss Overhang</li>
+					<li>Peacock</li>
+					<li>Academy</li>
+					<li>Ministry War Camp</li>
+					<li>Blue Stone River</li>
+					<li>Dry Bed Creek</li>
+					<li>Lion Throne</li>
+				</ul>
+
+			<h3>Badlands</h3>
+
+				<ul>
+					<li>Ministry Outpost</li>
+					<li>Barren Lands</li>
+					<li>Scalded Lands</li>
+					<li>Nomad Lands</li>
+					<li>Salted Lands</li>
+					<li>Frozen Lands</li>
+					<li>Obsidian Legion</li>
+					<li>Oasis</li>
+					<li>Meteor Fall</li>
+					<li>Acid Lands</li>
+				</ul>
+				
+			<h3>Dusty Mountains</h3>
+
+				<ul>
+					<li>Lookout Pass</li>
+					<li>High Ridge</li>
+					<li>Penal Mines</li>
+					<li>Old Stone Quarry</li>
+					<li>Aerie Preserve</li>
+					<li>Dragon Peak</li>
+					<li>Warrens</li>
+					<li>Black Drop Caves</li>
+					<li>Springs Caldera</li>
+					<li>Springs Volcano</li>
+				</ul>
+				
+			<h3>Lowlands</h3>
+
+				<ul>
+					<li>Troll Haunt</li>
+					<li>Red Herd</li>
+					<li>Lion Farm</li>
+					<li>Blue Ice Hole</li>
+					<li>Hyena</li>
+					<li>Jackal</li>
+					<li>The Pits</li>
+					<li>Golden Wheat</li>
+					<li>Rocky Falls</li>
+					<li>Hill Marsh</li>
+				</ul>
+				
+			<h3>Borderlands</h3>
+
+				<ul>
+					<li>Ministry Garrison</li>
+					<li>Guard Post</li>
+					<li>Supremacy</li>
+					<li>Commonwealth</li>
+					<li>Trading Post</li>
+					<li>Eagle's Nest</li>
+					<li>Gray Temple</li>
+					<li>Elephant</li>
+					<li>Ancient Ruins</li>
+					<li>Blade Trail</li>
+				</ul>
+				
+			<h3>Hinterlands</h3>
+
+				<ul>
+					<li>Cinnamon Plains</li>
+					<li>Independence Battlefield</li>
+					<li>Rock Shelter</li>
+					<li>Old Preserve</li>
+					<li>Clay Bridge</li>
+					<li>Gray Arena</li>
+					<li>Wolf</li>
+					<li>Vulture Aviary</li>
+					<li>Sand Basin</li>
+					<li>Salt Flat</li>
+				</ul>
+				
+			<h3>Floodplains</h3>
+
+				<ul>
+					<li>Turtle Archipelago</li>
+					<li>Bright Star</li>
+					<li>New Preserve</li>
+					<li>Ginger Hills</li>
+					<li>Granite Lodge</li>
+					<li>Hard Claw</li>
+					<li>The Flats</li>
+					<li>Capped Bay</li>
+					<li>Rainy Beach</li>
+					<li>Barnacle Beach</li>
+				</ul>
+				
+			<h3>Wetlands</h3>
+
+				<ul>
+					<li>Rock Tower</li>
+					<li>Salmon Rapids</li>
+					<li>Blue Marsh</li>
+					<li>Salmon Stream</li>
+					<li>Crystal Grotto</li>
+					<li>Quiet Bayou</li>
+					<li>Crocodile</li>
+					<li>Sage Swamp</li>
+					<li>Sulfur Mines</li>
+					<li>Painted Bog</li>
+				</ul>
+				
+			<h3>Highlands</h3>
+
+				<ul>
+					<li>High Bluffs</li>
+					<li>Burnt Plains</li>
+					<li>Craggy Slopes</li>
+					<li>Arid Peak</li>
+					<li>Low Canyon</li>
+					<li>Bright Caverns</li>
+					<li>Folded Chasm</li>
+					<li>War Camp</li>
+					<li>Nine Bridges</li>
+					<li>High Loft</li>
+				</ul>
+				
+			<h3>Northlands</h3>
+
+				<ul>
+					<li>Sloping Fields</li>
+					<li>Ice Flow</li>
+					<li>Glacier Peak</li>
+					<li>Snow Path</li>
+					<li>Bear</li>
+					<li>Rabbit</li>
+					<li>Frostgroves</li>
+					<li>Cliffhold</li>
+					<li>North Fjords</li>
+					<li>Sword Hilt</li>
+				</ul>
+				
+			<h3>Farmlands</h3>
+
+				<ul>
+					<li>The Craters</li>
+					<li>Horse</li>
+					<li>Delta</li>
+					<li>Chicken</li>
+					<li>Raging River</li>
+					<li>Fresh River</li>
+					<li>Stacked Stone</li>
+					<li>Fallen Tree</li>
+					<li>Granite Falls</li>
+					<li>Festival</li>
+				</ul>
+				
+			<h3>Heartlands</h3>
+
+				<ul>
+					<li>The Trenches</li>
+					<li>Wooded Hills</li>
+					<li>Pearl</li>
+					<li>The Docks</li>
+					<li>The Shallows</li>
+					<li>Storm Gulch</li>
+					<li>Sheltered</li>
+					<li>Brush River</li>
+					<li>Storm Channel</li>
+					<li>Guard Training</li>
+				</ul>
+				
+			<h3>Frostlands</h3>
+
+				<ul>
+					<li>Gated Wall</li>
+					<li>Haunted Spire</li>
+					<li>Open Market</li>
+					<li>The Hatchery</li>
+					<li>Flooded River</li>
+					<li>Foothils</li>
+					<li>Guard Fort</li>
+					<li>Triumph</li>
+					<li>Dragana Gap</li>
+					<li>Amahle Peak</li>
+				</ul>
+				
+			<h3>Gravelands</h3>
+
+				<ul>
+					<li>New Green Grove - Starting Rebel village (where major characters start)</li>
+					<li>The Needles</li>
+					<li>Raptor Heights</li>
+					<li>Haven Hall</li>
+					<li>The Flutes</li>
+					<li>Jagged Crag</li>
+					<li>Hollow Hill</li>
+					<li>The Crypts</li>
+					<li>Shaded Pass</li>
+					<li>Sanctuary</li>
+				</ul>
+				
+
+		<h2>Missions</h2>
+
+			<ul>
+				<li>Diplomacy
+					<ul>
+						<li>Depending on currently loyalty, time to finish mission will adjust.</li>
+						<li>Calculate initial chance of failure. If it doesn't initially fail, then:
+							<ul>
+								<li>Add loyalty and diplomacy. Randomly generate d100. If loyalty+diplomacy>d100, add ~5 to loyalty.</li>
+								<li>If Rebel loyalty > 65, then planet supports Rebels. If Imperial loyalty > 65, then planet supports Empire. If neither, planet is neutral.</li>
+								<li>If either loyalty > 100, that loyalty is set to 100. End mission, start function for new diplomacy mission.</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>Assassination Mission - Injure or kill a targeted character
+					<ul>
+						<li>Calculate initial chance of failure. If it doesn't initially fail, then:
+							<ul>
+								<li>Run Detection function. If success, end mission (potentially with injury or capture).</li>
+								<li>If Detection fails, calculate chances of assassination based on combat values</li>
+								<li>Results can be killed, injured, or no effect.</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>Abduction - Captures a target character</li>
+				<li>Espionage - Gathers information on a targeted system's defenses, personal, facilities, fleets in orbit, and ongoing missions, where a successful mission can lead to information from another system. (Rebel players who successfully conduct an espionage mission on Coruscant can obtain information on several enemy-controlled planets)</li>
+				<li>Incite Uprising - Attempts to sway public opinion against your opponent which could lead to the planet going neutral or thrown into a full-blown uprising</li>
+				<li>Sabotage - Destroys a targeted installation, planetary defense structure, regiment, planetary-based starfighters, or any starship in orbit over a planet.</li>
+				<li>Death Star Sabotage (Rebel Only) - Destroys a Death Star over a planet</li>
+				<li>Recruitment - Recruits other characters into your army</li>
+				<li>Facility Design Research - Improves the capabilities of Construction Yards to research and develop new structures</li>
+				<li>Troop Design Research - Improves the capabilities of Training Facilities to research and develop new troop regiments</li>
+				<li>Starship Design Research - Improves the capabilities of Shipyards to research and develop new starships</li>
+				<li>Rescue - Rescues captured characters from your opponent</li>
+				<li>Jedi Training - When present with at least a Jedi Knight or better, trains targeted Force-Sensitive characters to improve stats overall</li>
+				<li>Subdue Uprising - Stops an uprising on a planet you control</li>
+			</ul>
+
+				<p>If mission succeeds, +1 to tested attribute to each non-decoy character (not special forces).</p>
+
+
+			<h3>Unique missions:</h3>
+				<ul>
+					<li>Improved Assassination Mission (Empire Only) - Injure or kill a targeted character</li>
+					<li>Improved Abduction - Captures a target character</li>
+					<li>Improved Espionage - Gathers information on a targeted system's defenses, personal, facilities, fleets in orbit, and ongoing missions, where a successful mission can lead to information from another system. (Rebel players who successfully conduct an espionage mission on Coruscant can obtain information on several enemy-controlled planets)</li>
+					<li>Improved Incite Uprising - this one adds troops for immediate combat, can have two, one for any village, one for a specifically named village</li>
+					<li>Improved Sabotage - Destroys a targeted installation, planetary defense structure, regiment, planetary-based starfighters, or any starship in orbit over a planet.</li>
+					<li>Improved Death Star Sabotage (Rebel Only) - Destroys a Death Star over a planet</li>
+					<li>Improved Recruitment - Recruits other characters into your army</li>
+					<li>Improved Facility Design Research - Improves the capabilities of Construction Yards to research and develop new structures</li>
+					<li>Improved Troop Design Research - Improves the capabilities of Training Facilities to research and develop new troop regiments</li>
+					<li>Improved Starship Design Research - Improves the capabilities of Shipyards to research and develop new starships</li>
+					<li>Improved Diplomacy - Diplomacy and produces troops simultaneously</li>
+					<li>Improved Diplomacy - Targets a specific village but has easier time of it</li>
+					<li>Improved Rescue - Rescues captured characters from your opponent</li>
+					<li>Improved Jedi Training - When present with at least a Jedi Knight or better, trains targeted Force-Sensitive characters to improve stats overall</li>
+					<li>Improved Subdue Uprising - Stops an uprising on a planet you control</li>
+					<li>Rescue a non-starting character to add that character to your pool (rescued personnel's stats start weak and slowly rise to normal, rise quicker if with storied companion)</li>
+					<li>Sabotage a military industrial complex to halve the speed of enemy's production for a given amount of time</li>
+					<li>Interrogate a prisoner for information in place of espionage mission</li>
+					<li>Specific character can sacrifice themself when captured to add to stats of companion character</li>
+					<li>Training mission to get an incredible stat boost</li>
+					<li>Convince enemy character to join your side - probably needs a specific companion</li>
+					<li>Send to academy: the character gains an r&d skill</li>
+					<li>Kamikaze? Is it worth having a character be able to take out a large ship by sacrificing themselves? Happens twice (once by accident) in Star Wars...</li>
+					<li>Sabotage three starfighter-class (not capital-class) ships at once</li>
+					<li>Capital-class raid: if successful, in the next battle, starfighters have double their effectiveness against capital ships</li>
+					<li>Create a diversion: if successful, the next mission has twice the chance of success</li>
+					<li>Close quarter combat desperation: if successful, each unit in the next battle has reduced health</li>
+					<li>Propaganda counter measures: if successful, your opponent's next mission automatically fails? -is this useful? yes, travel time matters</li>
+					<li>Potemkin's village: if successful, select a neutral village. When encountered by your opponent, that village is shown to have loyalty to you despite its true loyalty. This status remains until your opponent successfully espionages or lands troops on the village</li>
+					<li>I know the badlands: if successful, move your units from any village in the Badlands to any loyal village at half the time it would typically take</li>
+					<li>Oversight: if successful, while this character is overseeing, the next Espionage or Diplomacy mission from her village is automatically successful</li>
+					<li>Diplomatic bribes: if successful, lose X resources to choose a subjugated village. Move all opponent's units from that village to the closest village loyal to your opponent</li>
+					<li>Better half: if successful, recruit Companion to this village</li>
+					<li>Thorn in the side: if successful, next opponent mission to character's missioned village automatically fails</li>
+					<li>Production oversight: if successful, this village's production time is doubled for the next XX seconds while character is overseeing</li>
+					<li>If successful, automatically capture next opponent character assigned to this character's village (your character must be overseeing)</li>
+					<li>Intelligence gathering: If successful, select three villages loyal to your opponent. Each of those villages reports back as though you completed a succussful Espionage mission</li>
+					<li>Death mark: if successful, choose a village. When opponent next attempts mission in that village, the mission is canceled and a XX second cooldown timer is started. Enemy missions cannot be attempted in that village until the timer reaches zero.</li>
+					<li>Surprise assault: if successful, your opponent cannot retreat from the next battle in this village</li>
+					<li>Combat readiness: if successful, your troops fight at 1.25% efficacy in the next battle in this village</li>
+					<li>Studying logistics: if successful, choose a region to find out if the Rebel Lions stronghold is in that region</li>
+					<li>Concentrate war effort: if successful, destroy enemy ship in Fire Ballista's region</li>
+					<li>Battle plans: if successful, choose any unique mission and its requirements will be listed (how to get that mission to become available)</li>
+					<li>Grassroots support: if successful, choose a neutral village. If that village joins you, gain XX troops there.</li>
+					<li>Scout ahead: if successful, choose XX starfighter-class ships. Move them to any village. If Rebel Lions troops present, resolve a battle as normal. If not, the village information is listed as though you successfully completed an Espionage mission.</li>
+					<li>Out of nowhere: if successful, this character's next mission does not have the typical chance of failure before calculating success</li>
+					<li>Calculating enemy forces: if successful, during the next battle in this village, your opponent's units fight at 90% efficiency</li>
+					<li>Steal Fire Balista plans: if successful, better shot at sabotaging Fire Balista</li>
+					<li>Improved Production: </li>
+					<li>Move fleets quickly</li>
+					<li>Decrease initial chance of failure</li>
+					<li>Increase opponent's initial chance of failure</li>
+					<li>Confuse Ministry's searches for stronghold</li>
+					<li>Assign alongside another mission; if it fails, this character takes over with higher chance of success</li>
+					<li>Move units and fight more effectively in a single battle</li>
+					<li>Training missions that vastly improve stats</li>
+					<li>Stroke of genius engineering: Build massive (SSD) units that are otherwise not in the production facility</li>
+					<li>Improved diplomacy: If Fire Ballista in region, your diplomacy missions in the region are more likely to succeed, and more effective</li>
+					<li>Cause village to declare neutrality</li>
+					<li>Interrogation missions against captured leaders</li>
+					<li>Recon missions</li>
+					<li>Anti-espionage missions?</li>
+					<li>Turn captured character to your side</li>
+					<li>Cooldown timer on when a character can be used</li>
+					<li>Release a captured character to gain info on where the stronghold is</li>
+					<li>Steal a ship</li>
+				</ul>
+
+		<h2>Facilities</h2>
+			<ul>
+				<li>Multiple facilities decreases the time to production</li>
+				<li>How to use resources and raw materials</li>
+				<li>Mines and refineries?</li>
+			</ul>
+
+		<h2>Characters</h2>
+			<p><a href="https://docs.google.com/spreadsheets/d/1J3FpGaFfmQ92Vs-X9DXK8QpZCWVmRGWbLZR7Y6yY5ik/edit#gid=208374039">See "Characters" tab on Google Drive spreadsheet</a></p>
+			<p>Consider adding a base location to each character that can be changed, where the character will go automatically if on a failed mission (also consider whether or not to just send them to the closest friendly planet (this is probably the best idea))</p>
+
+		<h2>Special Forces</h2>
+
+		<h2>Troops</h2>
+
+		<h2>Ships</h2>
+			<ul>
+				<li>Add individual stats like characters</li>
+				<li>Add a way for them to battle and see individual ship damage and assign targets, probably in a modal, maybe in an expanded hidden area, maybe in its own dedicated battle area like the other panes (personnel, planet)</li>
+			</ul>
+
+		<h2>Distances</h2>
+			<p>Currently not started, but I envision a spreadsheet with each planet as a row and each planet as a column with the travel times as data cells.</p>
+
+		<h2>Cheat Codes</h2>
+
+		<p>For testing. Then we remove them and leave the prompt that replies back if people put in cool Star Wars races or something.</p>
+
+</body>
+</html>

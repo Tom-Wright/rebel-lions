@@ -1,0 +1,33 @@
+.outer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.village-info-grid, .personnel-info-grid {
+  border: 1px solid;
+  padding: 10px;
+  margin: 10px;
+}
+
+.village-info-grid, .personnel-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.personnel-info-grid {
+  grid-template-rows: 1fr 1fr;
+}
+
+.personnel-list {
+  order: 3;
+}
+
+.village-name, .personnel-grid {
+  order: 2;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
