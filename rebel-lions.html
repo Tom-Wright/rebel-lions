@@ -12,105 +12,63 @@
 <body>
 	<h1>Rebel Lions</h1>
 
-	<main class="container">
+	<button id="startButton" onclick="start()">Play the Game!</button>
+
+	<main id="main" class="container" style="display: none;">
 
 		<div class="card-deck">
 
 			<div class="card" style="width: 18rem;">
-  				<img src="images/village-placeholder.png" class="card-img-top" alt="The Needles">
+  				<img src="images/village-placeholder.png" class="card-img-top" alt="World Map">
   				<div class="card-body">
-  					<div class="progress">
-	  					<div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-					</div>
-    				<h2 class="card-title">The Needles</h2>
-	    				<ul class="list-group list-group-flush">
-		              		<li class="list-group-item">4 Mines/Refineries</li>
-		              		<li class="list-group-item">3 Building Sites</li>
-				            <li class="list-group-item">1 Training Grounds</li>
-				            <li class="list-group-item">1 Vehicle Factory</li>
-		            	</ul>
-
-    					<!-- Button trigger Village modal -->
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#village-modal">
-						  Encyclopedia
-						</button>
-
-						<!-- Village Modal -->
-						<div class="modal fade" id="village-modal" tabindex="-1" role="dialog" aria-labelledby="village-modal-title" aria-hidden="true">
-						  <div class="modal-dialog modal-dialog-centered" role="document">
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        <h5 class="modal-title" id="village-modal-title">The Needles Village</h5>
-						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						          <span aria-hidden="true">&times;</span>
-						        </button>
-						      </div>
-						      <div class="modal-body">
-						        <p>The people of the Needles joke with dark humor that they don't live in the Gravelands, but the Dying Lands. The village is almost entirely sustained by importing food; the food grown there is weak and typically dies on the vine. The people raised in the Needles are known to be hardy and independent warriors, and tend to make most of their living offering their services as mercenaries. The Needles village is so named because of the broken spines that jut up from the ground. No one living knows the true explanation for them, although rumors and legends abound.</p>
-						      </div>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						      </div>
-						    </div>
-						  </div>
-						</div>
-
-						<h3>On mission:</h3>
-			            	<img alt="Eevi" src="images/placeholder.png">
-			            	<img alt="Eevi" src="images/placeholder.png">
-			            	<img alt="Eevi" src="images/placeholder.png">
-			            	<img alt="Eevi" src="images/placeholder.png">
-
-		            	<h3>Overseeing:</h3>
-		            		<img alt="Eevi" src="images/placeholder.png">
-    				
+  					<h2 class="card-title">Map of the Ministry</h2>
+	    				
   				</div>
 			</div>
 
-			<!-- Character card -->
-			<div class="card" style="width: 18rem;">
-				<img src="images/characters/lion-amahle.png" class="card-img-top" alt="Amahle">
-			  	<div class="card-body">
-			    	<h2 class="card-title">Amahle</h2>
-			    		<p class="card-text">Status: Idle</p>
-			    		<ul class="list-group list-group-flush">
-		              		<li class="list-group-item">Diplomacy: 20</li>
-		              		<li class="list-group-item">Combat: 70</li>
-				            <li class="list-group-item">Espionage: 10</li>
-				            <li class="list-group-item">Leadership: 70</li>
-		            	</ul>
-			    		<select class="btn btn-secondary dropdown-toggle" id="actions">
-	             			<option value="actions">Actions</option>
-			               	<option value="mission">Mission</option>
-			               	<option value="move">Move</option>
-			               	<option value="oversee">Oversee</option>
-	             		</select>
+			<!-- Character column, the class is controlling the column, shadow, rounded corners, margin, and padding -->
+			<div class="col-sm shadow rounded-lg mx-3 p-4">
+				
+				<!-- Character card and list -->
+				<div class="row">
 
-			             <!-- Button trigger Character modal -->
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#character-modal">
-						  Encyclopedia
-						</button>
+					<!-- Character icon lists -->
+					<div class="row">
 
-						<!-- Character Modal -->
-						<div class="modal fade" id="character-modal" tabindex="-1" role="dialog" aria-labelledby="character-modal-title" aria-hidden="true">
-						  	<div class="modal-dialog modal-dialog-centered" role="document">
-						    	<div class="modal-content">
-						      		<div class="modal-header">
-						        		<h5 class="modal-title" id="character-modal-title">Amahle</h5>
-						        			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						          			<span aria-hidden="true">&times;</span>
-						        			</button>
-						      		</div>
-						      		<div class="modal-body">
-						        		<p>Amahle is nearing retirement age, but no one expects that she will actually leave the Guard. A finely-honed warrior, Amahle was wounded in the coup against Shu-fen's father, and lost her leg. Now unable to enter combat, Amahle's new battlefield is the training ground, where she instructs the upcoming Guard recruits in matters of arms. While Amahle has not fought since Shu-fen began her reign, only a fool would think that missing a leg would deter her if the necessity of combat arose.</p>
-						      		</div>
-						      		<div class="modal-footer">
-						        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						      		</div>
-						    	</div>
-						  	</div>
+						<!-- Character icon lists -->
+						<div class="col-sm">
+
+							<h2>Personnel</h2>
+
+			    			<h3>All Personnel</h3>
+				    			<img class="rounded float-left" alt="Eevi" src="images/placeholder.png">
+				            	<img class="rounded float-left" alt="Eevi" src="images/placeholder.png">
+				            	<img class="rounded float-left" alt="Eevi" src="images/placeholder.png">
+				            	<img class="rounded float-left" alt="Eevi" src="images/placeholder.png">
+				            	<img class="rounded float-left" alt="Eevi" src="images/placeholder.png">
+				            	<img class="rounded float-left" alt="Eevi" src="images/placeholder.png">
+
+				            <h3>On mission</h3>
+
+				            	<img alt="Eevi" src="images/placeholder.png">
+				            	<img alt="Eevi" src="images/placeholder.png">
+				            	<img alt="Eevi" src="images/placeholder.png">
+				            	<img alt="Eevi" src="images/placeholder.png">
+
+				            <h3>Overseeing</h3>
+
+				            	<img alt="Eevi" src="images/placeholder.png">
+
+				            <h3>Idle</h3>
+
+				            	<img alt="Amahle" src="images/placeholder.png">
+
 						</div>
+
+					</div>
+
 				</div>
+
 			</div>
 
 		</div>
@@ -187,51 +145,50 @@
 
 			</div>
 
-			<!-- Character column, the class is controlling the column, shadow, rounded corners, margin, and padding -->
-			<div class="col-sm shadow rounded-lg mx-3 p-4">
-				
-				<!-- Character card and list -->
-				<div class="row">
+			<!-- Character card -->
+			<div class="card" style="width: 18rem;">
+				<img src="images/characters/lion-amahle.png" class="card-img-top" alt="Amahle">
+			  	<div class="card-body">
+			    	<h2 class="card-title">Amahle</h2>
+			    		<p class="card-text">Status: Idle</p>
+			    		<ul class="list-group list-group-flush">
+		              		<li class="list-group-item">Diplomacy: 20</li>
+		              		<li class="list-group-item">Combat: 70</li>
+				            <li class="list-group-item">Espionage: 10</li>
+				            <li class="list-group-item">Leadership: 70</li>
+		            	</ul>
+			    		<select class="btn btn-secondary dropdown-toggle" id="actions">
+	             			<option value="actions">Actions</option>
+			               	<option value="mission">Mission</option>
+			               	<option value="move">Move</option>
+			               	<option value="oversee">Oversee</option>
+	             		</select>
 
-					
+			             <!-- Button trigger Character modal -->
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#character-modal">
+						  Encyclopedia
+						</button>
 
-					<!-- Character icon lists -->
-					<div class="row">
-
-						<!-- Character icon lists -->
-						<div class="col-sm">
-
-							<h2>Personnel</h2>
-
-			    			<h3>All Personnel</h3>
-				    			<img class="rounded float-left" alt="Eevi" src="images/placeholder.png">
-				            	<img class="rounded float-left" alt="Eevi" src="images/placeholder.png">
-				            	<img class="rounded float-left" alt="Eevi" src="images/placeholder.png">
-				            	<img class="rounded float-left" alt="Eevi" src="images/placeholder.png">
-				            	<img class="rounded float-left" alt="Eevi" src="images/placeholder.png">
-				            	<img class="rounded float-left" alt="Eevi" src="images/placeholder.png">
-
-				            <h3>On mission</h3>
-
-				            	<img alt="Eevi" src="images/placeholder.png">
-				            	<img alt="Eevi" src="images/placeholder.png">
-				            	<img alt="Eevi" src="images/placeholder.png">
-				            	<img alt="Eevi" src="images/placeholder.png">
-
-				            <h3>Overseeing</h3>
-
-				            	<img alt="Eevi" src="images/placeholder.png">
-
-				            <h3>Idle</h3>
-
-				            	<img alt="Amahle" src="images/placeholder.png">
-
+						<!-- Character Modal -->
+						<div class="modal fade" id="character-modal" tabindex="-1" role="dialog" aria-labelledby="character-modal-title" aria-hidden="true">
+						  	<div class="modal-dialog modal-dialog-centered" role="document">
+						    	<div class="modal-content">
+						      		<div class="modal-header">
+						        		<h5 class="modal-title" id="character-modal-title">Amahle</h5>
+						        			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          			<span aria-hidden="true">&times;</span>
+						        			</button>
+						      		</div>
+						      		<div class="modal-body">
+						        		<p>Amahle is nearing retirement age, but no one expects that she will actually leave the Guard. A finely-honed warrior, Amahle was wounded in the coup against Shu-fen's father, and lost her leg. Now unable to enter combat, Amahle's new battlefield is the training ground, where she instructs the upcoming Guard recruits in matters of arms. While Amahle has not fought since Shu-fen began her reign, only a fool would think that missing a leg would deter her if the necessity of combat arose.</p>
+						      		</div>
+						      		<div class="modal-footer">
+						        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						      		</div>
+						    	</div>
+						  	</div>
 						</div>
-
-					</div>
-
 				</div>
-
 			</div>
 
 		</div>
@@ -265,5 +222,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/rebel-lions.js"></script>
 </body>
 </html>
