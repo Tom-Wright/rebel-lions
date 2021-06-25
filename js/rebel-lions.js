@@ -1,35 +1,17 @@
-
-// I thought I was using this modal code, but turns out I wasn't linking to this page and the modals worked fine... so delete this code?
-// var modal = document.querySelector(".modal");
-// var trigger = document.querySelector(".trigger");
-// var closeButton = document.querySelector(".close-button");
-
-// function toggleModal() {
-//     modal.classList.toggle("show-modal");
-// }
-
-// function windowOnClick(event) {
-//     if (event.target === modal) {
-//         toggleModal();
-//     }
-// }
-
-// trigger.addEventListener("click", toggleModal);
-// closeButton.addEventListener("click", toggleModal);
-// window.addEventListener("click", windowOnClick);
-
 // calls all functions needed to start the game
 function start() {
+    // render the starting elements on the screen by removing the display:none property
     renderScreen();
+    // remove the Play the Game! button from the DOM
     removeButton();
 }
 
-// renders the starting screen a the beginning of the game
+// renders the starting screen at the beginning of the game by removing the display:none property
 function renderScreen() {
     document.getElementById("main").removeAttribute("style");
 }
 
-// removes the Play the Game! button
+// removes the Play the Game! button from the DOM
 function removeButton() {
     document.getElementById("startButton").remove()
 }
