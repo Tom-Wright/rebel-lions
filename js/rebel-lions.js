@@ -33,10 +33,21 @@ function villagesAsButtons(villages) {
         }
         // assign the currentHeading to the village.region for the previous comparison (so it won't add another heading until the region changes)
         currentHeading = village.region;
-        // create a button, assign the village.name as its text content, and append it to the map container
+        // create a button, assign the class, assign the village.name as its text content, and append it to the map container
         let button = document.createElement("button")
+        button.className = "btn btn-outline-success"
         button.textContent = village.name
         mapContainer.appendChild(button)
+        // create a break variable and append it to the button to position the image correctly
+        const lineBreak = document.createElement("br")
+        button.appendChild(lineBreak)
+        // create an image variable, set it to the corresponding image from villages-array, and append it to the button
+        let villageImage = document.createElement("img")
+        villageImage.setAttribute("src",village.image)
+        button.appendChild(villageImage)
+        // add another break to position the progress bar correctly
+        const secondLineBreak = document.createElement("br")
+        button.appendChild(secondLineBreak)
         // create an outer div for the progress bar (Bootstrap needs an outer div), then set its class name
         let progress = document.createElement("div")
         progress.className = "progress"
@@ -53,10 +64,10 @@ function villagesAsButtons(villages) {
         let buttonId = `village${village.id}`
         button.setAttribute("id",buttonId)
         // set the aria-describedby attribute of the progress bar to the id of the button and assign it to the progress bar
-        progressbar.setAttribute("aria-describedby",buttonId)
+        // progressbar.setAttribute("aria-describedby",buttonId)
         // make the inner progressbar div a child of the outer progress div
         progress.appendChild(progressbar)
-        // add the entire progress bar (both divs) to the mapContainer
-        mapContainer.appendChild(progress)
+        // add the entire progress bar (both divs) to the button
+        button.appendChild(progress)
     }
 }
