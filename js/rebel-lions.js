@@ -4,6 +4,8 @@ function start() {
     renderScreen();
     // remove the Play the Game! button from the DOM
     removeButton();
+    // display the village container
+    // displayVillageStats();
     // display the Map of the Ministry
     villagesAsButtons(villages);
 }
@@ -16,6 +18,56 @@ function renderScreen() {
 // removes the Play the Game! button from the DOM
 function removeButton() {
     document.getElementById("startButton").remove()
+}
+
+/*
+This function
+is my current
+work in progress
+
+I also need to figure out how to change the color of the progress bars based on loyalty. That'll be its own function.
+*/
+// displays individual village statistics and image in the village container (upper-right quadrant)
+function displayVillageStats(selectedVillageId) {
+    // find the village matching the passed value
+    let selectedVillage = villages.find(village => village.id === selectedVillageId)
+    // overwrite current inner HTML values with new village variables
+    // declare new variable for getting selectedVillageImage by id to save processing overhead (going through the HTML and finding the id and returning a JS object)
+    let villageImageId = document.getElementById("selectedVillageImage")
+    // set image src and alt attributes
+    villageImageId.setAttribute("src",selectedVillage.image)
+    villageImageId.setAttribute("alt",selectedVillage.name)
+    // declare new variable for getting selectedVillageProgressBar by id to save processing overhead
+    let villageProgressBar = document.getElementById("selectedVillageProgressBar")
+    // set progress bar style and aria-valuenow attributes
+    villageProgressBar.setAttribute("style",`width: ${village.loyalty}%`)
+    villageProgressBar.setAttribute("aria-valuenow", village.loyalty)
+    // declare new variable for getting selectedVillageTitle by id to save processing overhead
+    let villageTitle = document.getElementById("selectedVillageTitle")
+    // set village name inner HTML
+    villageTitle.innerHTML = village.name
+    // declare new variable for getting villageModalTitle by id to save processing overhead
+    let villageModalTitle = document.getElementById("villageModalTitle")
+    // set village modal title inner HTML
+    villageModalTitle.innerHTML = village.name
+    // declare new variable for getting villageEncyclopediaBody by id to save processing overhead
+    let villageEncyclopediaBody = document.getElementById("villageEncyclopediaBody")
+    // set village encyclopedia body text inner HTML
+    villageEncyclopediaBody.innerHTML = village.encyclopedia
+    // declare new variables for getting villageMinesRefineries, villageBuildings, villageTraining, villageVehicleFactories by id to save processing overhead
+    let villageMines = document.getElementById("villageMinesRefineries")
+    let villageBuildings = document.getElementById("villageBuildings")
+    let villageTraining = document.getElementById("villageTraining")
+    let villageVehicleFactories = document.getElementById("villageVehicleFactories")
+    // set village mines, buildings, training, and vehicle factory stat variables inner HTML
+    villageMines.innerHTML = village.mines
+    villageBuildings.innerHTML = village.buildingSites
+    villageTraining.innerHTML = village.trainingGrounds
+    villageVehicleFactories.innerHTML = village.vehicleFactories
+    // declare new variable for getting selectedVillageRegion by id to save processing overhead
+    let selectedVillageRegion = document.getElementById("selectedVillageRegion")
+    // set region text under village heading inner HTML
+    selectedVillageRegion.innerHTML = village.region
 }
 
 // displays the villages in villages-array.js as HTML buttons
