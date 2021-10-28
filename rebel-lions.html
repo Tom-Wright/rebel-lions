@@ -22,15 +22,15 @@
 			<div class="col-sm shadow rounded-lg mx-3 p-4">
 
 				<!-- Village card and list -->
-				<div class="row">
+				<div id="villageContainer" class="row">
 
 					<!-- Village image and loyalty -->
 					<div class="col-sm">
 						
-						<img style="padding:30px" alt="Alderaan" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkjpJQ1bsc-y6tmGijYJBjhbn2oC7-GabZsjpVHeCtN7BkU7yo&s">
+						<img id="selectedVillageImage" style="padding:30px" alt="Alderaan" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkjpJQ1bsc-y6tmGijYJBjhbn2oC7-GabZsjpVHeCtN7BkU7yo&s">
 
 		            	<div class="progress">
-		  					<div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+		  					<div id="selectedVillageProgressBar" class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 						</div>
 
 					</div>
@@ -38,7 +38,8 @@
 					<!-- Village name, stats, and info -->
 					<div class="col-sm">
 						
-						<h2 id="village-title">The Needles</h2>
+						<h2 id="selectedVillageTitle">The Needles</h2>
+						<p id="selectedVillageRegion">Gravelands</p>
 
 	            		<!-- Button trigger Village modal -->
 						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#village-modal">
@@ -46,17 +47,17 @@
 						</button>
 
 						<!-- Village Modal -->
-						<div class="modal fade" id="village-modal" tabindex="-1" role="dialog" aria-labelledby="village-modal-title" aria-hidden="true">
+						<div class="modal fade" id="village-modal" tabindex="-1" role="dialog" aria-labelledby="villageModalTitle" aria-hidden="false">
 						  <div class="modal-dialog modal-dialog-centered" role="document">
 						    <div class="modal-content">
 						      <div class="modal-header">
-						        <h5 class="modal-title" id="village-modal-title">The Needles Village</h5>
+						        <h5 class="modal-title" id="villageModalTitle">The Needles Village</h5>
 						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						          <span aria-hidden="true">&times;</span>
 						        </button>
 						      </div>
 						      <div class="modal-body">
-						        <p>The people of the Needles joke with dark humor that they don't live in the Gravelands, but the Dying Lands. The village is almost entirely sustained by importing food; the food grown there is weak and typically dies on the vine. The people raised in the Needles are known to be hardy and independent warriors, and tend to make most of their living offering their services as mercenaries. The Needles village is so named because of the broken spines that jut up from the ground. No one living knows the true explanation for them, although rumors and legends abound.</p>
+						        <p id="villageEncyclopediaBody">The people of the Needles joke with dark humor that they don't live in the Gravelands, but the Dying Lands. The village is almost entirely sustained by importing food; the food grown there is weak and typically dies on the vine. The people raised in the Needles are known to be hardy and independent warriors, and tend to make most of their living offering their services as mercenaries. The Needles village is so named because of the broken spines that jut up from the ground. No one living knows the true explanation for them, although rumors and legends abound.</p>
 						      </div>
 						      <div class="modal-footer">
 						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -65,12 +66,11 @@
 						  </div>
 						</div>
 
-		            
 		            	<ul class="list-unstyled">
-		              		<li>4 Mines/Refineries</li>
-		              		<li>3 Building Sites</li>
-				            <li>1 Training Grounds</li>
-				            <li>1 Vehicle Factory</li>
+		              		<li><span id="villageMinesRefineries">4</span> Mines/Refineries</li>
+		              		<li><span id="villageBuildings">3</span> Building Sites</li>
+				            <li><span id="villageTraining">1</span> Training Grounds</li>
+				            <li><span id="villageVehicleFactories">1</span> Vehicle Factory</li>
 		            	</ul>
 		            
 		            	<h3>On mission:</h3>
